@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    opacity: 0.8;
+    height: 5vw;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    padding: 0 1rem;
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    padding: 0.8rem 1rem;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.navbar a:hover{
+    border-bottom: #28a745 4px solid;
+    color: #28a745;
+    animation-delay: 0.5s;
+}
+.logo h1{
+    font-size: 2rem;
+    color: #28a745;
+}
+
+
+
+.hero{
+    height: 100vh;
+    background: url(images/g.jpg) no-repeat center center/cover;
+    position: relative;
+}
+.hero::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+    top: 0;
+    left: 0;
+    opacity: 0.65;
+    position: absolute;
+}
+.hero *{
+    z-index: 10;
+}
+.home{
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+.gif{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gif > div{
+    height: 50%;
+    width: 70%;
+}
+.gif > div img{
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+}
+.branch-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    flex: 1.5;
+    margin: 0 2rem;
+}
+.home h1{
+    font-size: 2.5rem;
+}
+.home h3{
+    font-size: 1.5rem;
+}
+
+
+.about{
+    background-color: grey;
+    display: flex;
+}
+.about-us{
+    background-color: yellow;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+.about h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.about-us span{
+    color: white;
+    font-weight: bold;
+}
+.about-us p{
+    line-height: 150%;
+}
+.about .about-us{
+    flex: 1;
+}
+.about .core-values{
+    flex: 2;
+}
+
+
+.core-values{
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+.core-values--items{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+.icon{
+    height: 6rem;
+    width: 7rem; 
+    margin-bottom: 0.7rem;   
+}
+.persever .icon{
+    background: url(images/preseverance.png) no-repeat center center/cover;
+}
+.community .icon{
+    background: url(images/community.png) no-repeat center center/cover;
+}
+.believe .icon{
+    background: url(images/believe_in_yourself.png) no-repeat center center/cover;
+}
+
+
+
+.team{
+    background-color: #d6d1d1;
+}
+
+.team > h2, .courses > h2{
+    color: green;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 1rem;
+}
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.8rem;
+    margin: 1rem 1.5rem;
+    justify-items: center;
+}
+
+.team-card2{
+    height: 16rem;
+    width: 11rem;
+    border: #333 solid 2px;
+    overflow: hidden;
+}
+.team-card2 .card-top{
+    position: relative;
+    width: 100%;
+    height: 70%;
+}
+.team-card2 .card-top img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.team-card2 .card-bottom{
+    height: 30%;
+    background-color: #a8a7a7;
+    padding: 0.7rem;
+}
+.team-card2 .card-bottom p{
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+}
+.team-grid .team-card2:nth-child(n) .card-top{
+    transform: scaleX(1.6);
+    left: -0.9rem;
+    
+}
+
+.course-card2{
+    height: 13rem;
+    width: 10rem;
+    border: #333 solid 2px;
+}
+.course-card2 .card-top2{
+    width: 100%;
+    height: 70%;
+}
+.course-card2 .card-top2 img{
+    height: 100%;
+    width: 100%;
+}
+.course-card2 .card-bottom2{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    background-color: #a8a7a7;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+.course-card2 .card-bottom2 p{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.grid-courses{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 0 1rem;
+    justify-items: center;
+}
+.grid-courses > h3:nth-child(1), .grid-courses > h3:nth-child(6){
+    grid-column: 1 / span 4;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: gray;
+    /* justify-items: none; */
+}
+.grid-courses .course-card2:nth-child(2), .grid-courses .course-card2:nth-child(7),
+.grid-courses .course-card2:nth-child(11){
+  /* grid-column: 2 / span 1; */
+}
+.grid-courses .course-card2:nth-child(n) .card-top2{
+    transform: scale(0.7);
+}
+
+.volunteer{
+    display: flex;
+    height: auto;
+    padding-top: 2.5rem;
+}
+.form-column{
+    background-color: cornflowerblue;
+    padding: 0.5rem;
+    flex: 1;
+}
+.form-control {
+    padding: 0.5rem 0;
+}
+.btn{
+    background-color: forestgreen;
+    margin: 0.5rem 0;
+}
+.volunteer-form input{
+    width: 100%;
+    padding: 0.3rem 0;
+}
+.volunteer-form input:focus{
+    outline-color: #28a745;
+}
+.image-column{
+    background: url(images/classroom.png) no-repeat center center/cover;
+    flex: 1;
+}
+
+.header-container > h2{
+    padding: 1rem;
+    color: white;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.header-container{
+    background-color: #333;
+    opacity: 0.6;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #333;
+    row-gap: 0.8rem;
+    padding: 1.5rem;
+}
+
+.footer a{
+    color: #fff;
+    transition: all 1s;
+}
+.footer a:hover{
+    color: #28a745;
+    animation-delay: 0.5s;
+}
+.footer .social > *{
+    padding: 0 1rem;
+}
+
+
+@media (max-width: 500px) {
+    .team-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .about{
+        height: auto;
+        flex-direction: column;
+    }
+    .home{
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .gif > div{
+        padding-top: 1rem;
+        height: 60%;
+        width: 60%;
+    }
+    .gif{
+        flex-direction: row;
+    }
+    .branch-info, .gif{
+        flex: 1;
+    }
+    .branch-info{
+        padding-top: 28rem;
+    }
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+    .navbar ul{
+        flex-direction: column;
+    }
+    .navbar ul li{
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .navbar ul li a{
+        font-size: 2rem;
+    }
+       
+}
