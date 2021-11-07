@@ -51,7 +51,7 @@
 }
 
 
-
+/*Home screen*/
 .hero{
     height: 100vh;
     background: url(images/g.jpg) no-repeat center center/cover;
@@ -85,6 +85,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    z-index: 5;
 }
 .gif > div{
     height: 50%;
@@ -111,7 +112,7 @@
     font-size: 1.5rem;
 }
 
-
+/*About*/
 .about{
     background-color: var(--light-background);
     display: flex;
@@ -125,6 +126,7 @@
     font-size: 2rem;
     padding: 1rem 0;
     color: var(--drak-gray-background);
+    border-bottom: 2px solid #fff;
 }
 .about-us span{
     color:var(--drak-gray-background);
@@ -133,6 +135,7 @@
 }
 .about-us p{
     line-height: 150%;
+    padding-top: 2rem;
 }
 .about .about-us{
     flex: 1;
@@ -140,7 +143,6 @@
 .about .core-values{
     flex: 2;
 }
-
 .core-values{
     padding: 1rem;
     padding-bottom: 2rem;
@@ -173,6 +175,7 @@
     padding: 1rem;
 }
 
+/*Team Members table*/
 .team-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -180,55 +183,59 @@
     margin: 1rem 1.5rem;
     justify-items: center;
 }
-
-.team-card2{
+.team-card{
     height: 16rem;
     width: 11rem;
     border: var(--secondary-color) solid 2px;
     overflow: hidden;
+    transition: all 0.5s;
 }
-.team-card2 .card-top{
+.team-card:hover{
+    box-shadow: 0px 0px 15px 6px rgba(0,128,128,0.7);
+    transform: scale(1.2);
+}
+.team-card .card-top{
     position: relative;
     width: 100%;
     height: 70%;
 }
-.team-card2 .card-top img{
+.team-card .card-top img{
     position: absolute;
     height: 100%;
     width: 100%;
 }
-.team-card2 .card-bottom{
+.team-card .card-bottom{
     height: 30%;
     background-color: var(--light-background);
     padding: 0.7rem;
 }
-.team-card2 .card-bottom p{
+.team-card .card-bottom p{
     padding-top: 0.5rem;
     font-size: 0.8rem;
 }
-.team-grid .team-card2:nth-child(n) .card-top{
+.team-grid .team-card:nth-child(n) .card-top{
     transform: scaleX(1.6);
     left: -0.9rem;
     
 }
 
+/*Courses Table*/
 .courses{
     background-color: var(--light-background);
 }
-
-.course-card2{
+.course-card{
     height: 13rem;
     width: 10rem;
 }
-.course-card2 .card-top2{
+.course-card .card-top2{
     width: 100%;
     height: 70%;
 }
-.course-card2 .card-top2 img{
+.course-card .card-top2 img{
     height: 100%;
     width: 100%;
 }
-.course-card2 .card-bottom2{
+.course-card .card-bottom2{
     height: 30%;
     width: 100%;
     display: flex;
@@ -238,7 +245,7 @@
     align-items: center;
     padding-top: 0.5rem;
 }
-.course-card2 .card-bottom2 p{
+.course-card .card-bottom2 p{
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -249,7 +256,6 @@
     margin: 0 1rem;
     justify-items: center;
 }
-
 .grid-courses > h3:nth-child(1), .grid-courses > h3:nth-child(6){
     grid-column: 1 / span 4;
     font-size: 1.4rem;
@@ -258,14 +264,11 @@
     text-align: center;
     width: 100%;
 }
-.grid-courses .hdrs{
-    background: cornflowerblue;
-}
-
-.grid-courses .course-card2:nth-child(n) .card-top2{
+.grid-courses .course-card:nth-child(n) .card-top2{
     transform: scale(0.7);
 }
 
+/*Voulnteer section*/
 .volunteer{
     display: flex;
     height: auto;
@@ -285,11 +288,15 @@
     color: #fff;
     position: relative;
     transition: all 1s;
+    font-weight: bold;
 }
 .btn:hover{
     background-color: #fff ;
     color: var(--primary-color);
     animation-delay: 0.5s;
+    border-color: var(--primary-color);
+    border-width: 3px;
+    font-weight: bold;
 }
 .volunteer-form input{
     width: 100%;
@@ -302,7 +309,6 @@
     background: url(images/classroom.png) no-repeat center center/cover;
     flex: 1;
 }
-
 .header-container > h2{
     padding: 1rem;
     color: #fff;
@@ -314,7 +320,12 @@
     background-color: var(--drak-gray-background);
     opacity: 0.6;
 }
+.volunteer-form h2{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 0.5rem;
+}
 
+/*Footer*/
 .footer{
     display: flex;
     flex-direction: column;
@@ -338,7 +349,7 @@
     padding: 0 1rem;
 }
 
-
+/*Mobile*/
 @media (max-width: 500px) {
     .team-grid{
         grid-template-columns: repeat(3,1fr);
